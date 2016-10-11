@@ -1,0 +1,198 @@
+<div>
+  <div id="wrapper">
+    <!--BEGIN PAGE WRAPPER-->
+    <div id="page-wrapper"><!--BEGIN TITLE & BREADCRUMB PAGE-->
+      <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+        <div class="page-header pull-left">
+          <div class="page-title">Dashboard <span>
+            <button class="btn btn-info btn-sm btn-add-filter" data-hover="tooltip" title="Filter"><i class="fa fa-filter"></i> Filter</button>
+            </span>
+            <span class="facility-view"><input type="text" class="form-control input-sm" palceholder="Facility / Hierarchy" value="AAA Demo Facility"></span>
+          </div>
+
+        </div>
+        <div class="pull-right">
+          <img src="../../app/images/logo-transights-financial1.png" alt="Logo" height="40">
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--END TITLE & BREADCRUMB PAGE--><!--BEGIN CONTENT-->
+      <div class="page-content">
+        <div class="row">
+          <div id="add-filter" class="col-md-3 clearfix" style="display:;">
+            <div class="panel panel-orange" data-step="2" data-intro="This is a tooltip!">
+              <div class="panel-heading">Add Filter</div>
+              <div class="panel-body">
+                <form>
+                  <div class="clearfix">
+                    <div class="form-group">
+                      <label>As Of Date:</label>
+                      <div class="input-icon right datetime-picker"><i class="fa fa-calendar"></i>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Facility:</label>
+                      <select class="form-control input-sm form-combobox">
+                        <option id="201">AAA Demo Facility</option>
+                        <option id="202">Allegany Health Nursing and Rehabilitation</option>
+                        <option id="203">Berlin Nursing &amp; Rehabilitation</option>
+                        <option id="204">Bowling Green</option>
+                        <option id="205">Bowling Green Care Center</option>
+                        <option id="206">Bradford Manor</option>
+                        <option id="207">Briarwood Village</option>
+                        <option id="208">Celina Manor</option>
+                        <option id="209">Chapel Hill Nursing &amp; Rehabilitation</option>
+                        <option id="210">Cliveden</option>
+                        <option id="211">Corry Manor</option>
+                        <option id="212">Court House Manor</option>
+                        <option id="213">Crestview Manor</option>
+                        <option id="214">Delmar</option>
+                        <option id="215">Edinboro Manor</option>
+                        <option id="216">Fairfield Nursing &amp; Rehabilitation</option>
+                        <option id="217">Fairview Manor</option>
+                        <option id="218">Falling Springs</option>
+                        <option id="219">Fox Run Manor</option>
+                        <option id="220">Hempfield Manor</option>
+                        <option id="221">Lima</option>
+                        <option id="222">Maplewood</option>
+                        <option id="223">Oakland Nursing &amp; Rehabilitation</option>
+                        <option id="224">Piqua Manor</option>
+                        <option id="225">Pleasant Hill Manor</option>
+                        <option id="226">Roselawn Manor</option>
+                        <option id="227">Shawnee</option>
+                        <option id="228">St. Catherine's Findlay</option>
+                        <option id="229">St. Catherine's Fostoria</option>
+                        <option id="230">St. Catherine's of Washington Court House</option>
+                        <option id="231">Stone Pear Pavilion</option>
+                        <option id="232">Sweden Valley Manor</option>
+                        <option id="233">The Manor at Perrysburg</option>
+                        <option id="234">Tucker House</option>
+                        <option id="235">Van Wert Manor</option>
+                        <option id="236">Wapakoneta Manor</option>
+                        <option id="237">Warren Manor</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Unit:</label>
+                      <div class="multiselect-wrapper">
+                        <select multiple="multiple" class="form-control input-sm form-multiselect">
+                          <option value="0" selected="selected">All</option>
+                          <option value="-7" selected="selected">Station 1</option>
+                          <option value="-34" selected="selected">Station 2</option>
+                          <option value="-25">Station 3</option>
+                          <option value="-1">Station 4</option>
+                          <option value="-39">Station 5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Payer:</label>
+                      <div class="multiselect-wrapper">
+                        <select multiple="multiple" class="form-control input-sm form-multiselect">
+                          <option id="308">All</option>
+                          <option id="309">Hospice</option>
+                          <option id="310">Hospice MA Heavy</option>
+                          <option id="311">Insurance</option>
+                          <option id="312">MA-Pending 2015</option>
+                          <option id="313">MA-Res Care Day</option>
+                          <option id="314">MA-Res Care Vent</option>
+                          <option id="315">Medicare</option>
+                          <option id="316">Private</option>
+                          <option id="317">Private - No Bill</option>
+                          <option id="318">Unknown</option>
+                          <option id="319">VA</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-info" type="button">Apply Filter</button>
+                      <button class="btn btn-orange btn-close" type="reset">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9" id="dashboard-data">
+            <div class="row">
+              <ul id="draggablePanelList" class="list-unstyled">
+                <li class="col-md-6 dragitem" data-step="4" data-intro="This is a tooltip!">
+                  <div class="panel">
+                    <div class="panel-heading">Real Time Average ADL Scrore Distribution</div>
+                    <div class="panel-body">
+                      <div id="columnchart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-md-6 dragitem" data-step="5" data-intro="This is a tooltip!">
+                  <div class="panel">
+                    <div class="panel-heading">Real Time RUGs IV ADL Distribution</div>
+                    <div class="panel-body">
+                      <div id="piechart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-md-6 dragitem" data-step="6" data-intro="This is a tooltip!">
+                  <div class="panel">
+                    <div class="panel-heading">Real Time ADL Scrore vs Last MDS Score</div>
+                    <div class="panel-body">
+                      <div class="table-responsive" style="height:260px;">
+                        <table class="table table-hover table-bordered">
+                          <thead>
+                          <tr>
+                            <th width="3%" class="hidden"></th>
+                            <th width="55%" class="header headerSortUp">RUGs IV ADL vs MDS</th>
+                            <th class="header">Record Count</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td class="hidden"></td>
+                            <td>ADl Greater than MDS</td>
+                            <td>289</td>
+                          </tr>
+                          <tr>
+                            <td class="hidden"></td>
+                            <td>ADl Less than MDS</td>
+                            <td>179</td>
+                          </tr>
+                          <tr>
+                            <td class="hidden"></td>
+                            <td>ADl Same as MDS</td>
+                            <td>56</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-md-6 dragitem" data-step="7" data-intro="This is a tooltip!">
+                  <div class="panel">
+                    <div class="panel-heading">RUGs IV ADL Distribution</div>
+                    <div class="panel-body">
+                      <div id="columnchart2" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END CONTENT-->
+      <!--BEGIN FOOTER-->
+      <div id="footer">
+        <div class="copyright">
+          <div class="clearfix">
+            <div class="pull-left"><img src="../../app/images/logo-rtms.jpg" alt="Product" height="54"></div>
+            <div class="f-content"> <a href="javascript:;">Home</a> &bull; <a href="javascript:;">Contact</a><br>
+              Pennsylvania &bull; 724.766.1262 &bull; <a href="javascript:;">contactus@rtmsmail.com</a><br>
+              &copy;2014 Real Time Medical Systems LLC </div>
+          </div>
+        </div>
+      </div>
+      <!--END FOOTER--></div>
+    <!--END PAGE WRAPPER--></div>
+</div>

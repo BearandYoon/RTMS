@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="app/styles/main.css">
+    <!-- endbuild -->
+    <!--Loading bootstrap css-->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:regular' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' type='text/css' media='all' />
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/bootstrap-datepicker/css/datepicker.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="app/styles/bootstrap-multiselect.css" id="theme-change">
+
+    <!--Loading style vendors-->
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/animate.css/animate.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/jquery-pace/pace.css">
+    <link type="text/css" rel="stylesheet" href="Scripts/files/vendors/iCheck/skins/all.css">
+    <!--Loading style-->
+    <link type="text/css" rel="stylesheet" href="app/styles/introjs.css" id="theme-change">
+    <link type="text/css" rel="stylesheet" href="app/styles/style.css" id="theme-change">
+    <link type="text/css" rel="stylesheet" href="app/styles/style-responsive.css">
+</head>
+<body ng-app="RTMSApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view=""></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        !function (A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="Scripts/bower_components/jquery/dist/jquery.js"></script>
+    <script src="Scripts/bower_components/angular/angular.js"></script>
+    <script src="Scripts/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="Scripts/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="Scripts/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="Scripts/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="Scripts/bower_components/angular-route/angular-route.js"></script>
+    <script src="Scripts/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="Scripts/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="Scripts/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="Scripts/bower_components/angular-translate/angular-translate.js"></script>
+    <script src="Scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app/app.js"></script>
+    <script src="app/scripts/services/main.service.js"></script>
+    <script src="app/scripts/controllers/about.js"></script>
+    <script src="app/scripts/controllers/sidebar.js"></script>
+    <script src="app/scripts/controllers/topbar.js"></script>
+    <script src="app/scripts/controllers/dashboard.js"></script>
+
+    <script src="Scripts/files/js/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/files/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="Scripts/files/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="Scripts/files/js/jquery.blockUI.js"></script>
+    <!--loading bootstrap js-->
+    <script src="Scripts/files/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Scripts/files/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="Scripts/files/js/highcharts.js"></script>
+    <script src="Scripts/files/js/exporting.js"></script>
+    <script src="Scripts/files/js/export-csv.js"></script>
+    <script src="Scripts/files/js/html5shiv.js"></script>
+    <script src="Scripts/files/js/respond.min.js"></script>
+    <script src="Scripts/files/js/bootstrap-multiselect.js"></script>
+    <script src="Scripts/files/vendors/metisMenu/jquery.metisMenu.js"></script>
+    <script src="Scripts/files/vendors/slimScroll/jquery.slimscroll.js"></script>
+    <script src="Scripts/files/vendors/jquery-cookie/jquery.cookie.js"></script>
+    <script src="Scripts/files/vendors/moment/moment.js"></script>
+    <script src="Scripts/files/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="Scripts/files/vendors/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="Scripts/files/vendors/iCheck/icheck.min.js"></script>
+    <script src="Scripts/files/vendors/iCheck/custom.min.js"></script>
+    <script src="Scripts/files/js/jquery.menu.js"></script>
+    <script src="Scripts/files/vendors/jquery-pace/pace.min.js"></script>
+    <script src="Scripts/files/vendors/holder/holder.js"></script>
+    <script src="Scripts/files/js/intro.js"></script>
+    <script src="Scripts/files/js/index.js"></script>
+    <!--CORE JAVASCRIPT-->
+    <script src="Scripts/files/js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
