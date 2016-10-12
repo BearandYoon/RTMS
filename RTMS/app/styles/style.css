@@ -175,10 +175,16 @@ color:#ededed;}
 .fixed-topbar #page-wrapper{padding-top:50px !important;}
 #sidebar{background:#1F1F1F;}
 .navbar-static-side{transition:0.3s all linear;}
-.navbar-static-side ul li{border-bottom:1px dotted rgba(255, 255, 255, 0.2);}
-.navbar-static-side ul li:first-child a{padding:0;}
+
+.navbar-static-side ul li{
+	border-bottom:1px dotted rgb(31, 31, 13);
+	border-radius: 0px !im;
+}
 .navbar-static-side ul li.active a, .navbar-static-side ul li.active a:hover, .navbar-static-side ul li.active a:focus{background:#f46f34; outline:none; color:rgba(255, 255, 255, 1);}
-.navbar-static-side ul li a{color:#ccc; padding:15px; font-weight:700; text-transform:uppercase; font-family:Open Sans Condensed;}
+.st1,
+.navbar-static-side ul li a
+{color:#ccc; padding:15px; font-weight:700; text-transform:uppercase; font-family:Open Sans Condensed;}
+
 .navbar-static-side ul li a span.menu-title{margin-left:10px;}
 .navbar-static-side ul li a i{font-size:16px;}
 .navbar-static-side ul li a:hover, .navbar-static-side ul li a:focus{background:none; transition:0.2s all ease-in-out; outline:none; color:#f46f34;}
@@ -187,11 +193,33 @@ color:#ededed;}
 .navbar-static-side ul li a:focus i, .navbar-static-side ul li.active a i{color:#f46f34;}*/
 .navbar-static-side ul li a .badge, .navbar-static-side ul li a .label{float:right; margin-right:10px;}
 .navbar-static-side ul li a.menu-title{margin-left:10px;}
-.navbar-static-side ul li .nav-second-level li{border-top:1px dotted rgba(255, 255, 255, 0.2); border-bottom:0;}
+
+.navbar-static-side ul li .nav-second-level li{
+	border-top: 1px dotted rgba(255, 255, 255, 0.2);
+    border-bottom: 0;
+}
 .navbar-static-side ul li .nav-second-level li.active a, .navbar-static-side ul li .nav-second-level li:hover a, .navbar-static-side ul li .nav-second-level li:focus a{color:#fff;}
-.navbar-static-side ul li .nav-second-level li a{padding:15px 15px 15px 25px; background:#405058; color:#efefef;}
+
+
+.navbar-static-side ul li .nav-second-level li a{
+	padding:15px 15px 15px 25px;
+	background:#405058; 
+	color:#efefef;
+}
+
+.list-group-item li a{
+	padding:15px 15px 15px 25px;
+	background:#405058; 
+	color:#efefef;
+}
+
 .navbar-static-side ul li .nav-second-level li.active a, .navbar-static-side  ul li .nav-second-level li.active a:hover, .navbar-static-side  ul li .nav-second-level li.active a:focus{background:#f46f34; outline:none; color:rgba(255, 255, 255, 1);}
-.navbar-static-side ul li .nav-second-level li a span.submenu-title{margin-left:10px;}
+
+span.submenu-title,
+.navbar-static-side ul li .nav-second-level li a span.submenu-title{
+	margin-left:10px;
+}
+
 .navbar-static-side ul li .nav-second-level li .nav-third-level li{border-bottom:1px solid #42525b;}
 .navbar-static-side ul li .nav-second-level li .nav-third-level li.active a, .navbar-static-side ul li .nav-second-level li .nav-third-level li:hover a, .navbar-static-side ul li .nav-second-level li .nav-third-level li:focus a{color:#fff;}
 .navbar-static-side ul li .nav-second-level li .nav-third-level li a{padding:15px 15px 15px 25px; background:#3a484f; color:#efefef;}
@@ -875,7 +903,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge{color:#0a81
 .pagination{margin:0; width:100%; display:block; text-align:right;}
 .pagination li{display:inline-block;}
 .panel{-webkit-box-shadow:none !important; box-shadow:none !important; -webkit-border-radius:5px !important; -moz-border-radius:5px !important; border-radius:5px !important;}
-.panel > .panel-heading{border-color:#e5e5e5 !important; border-top-left-radius:4px !important; border-top-right-radius:4px !important; font-size:13px; padding:7px 10px;}
+/*.panel > .panel-heading{border-color:#e5e5e5 !important; border-top-left-radius:4px !important; border-top-right-radius:4px !important; font-size:13px; padding:7px 10px;}*/
 .panel .panel > .panel-heading{font-size:13px; font-weight:bold;}
 .panel > .panel-footer{font-size:18px; padding:7px 15px; border-bottom-right-radius:4px !important; border-bottom-left-radius:4px !important;}
 .panel.panel-primary{border-color:#0a819c;}

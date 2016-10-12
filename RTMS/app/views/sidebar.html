@@ -7,49 +7,106 @@
         <div class="info">
           <p>John Doe</p>
           <ul class="list-inline list-unstyled">
-            <li><a href="javascript:;" data-hover="tooltip" title="Mail"><i class="fa fa-envelope"></i></a></li>
-            <li><a href="configuration.html" data-hover="tooltip" title="Setting"><i class="fa fa-cog"></i></a></li>
-            <li><a href="login.html" data-hover="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+            <li><a class="user-panel-icon" href="" data-hover="tooltip" title="Mail"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="user-panel-icon" href="" data-hover="tooltip" title="Setting"><i class="fa fa-cog"></i></a></li>
+            <li><a class="user-panel-icon" href="" data-hover="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
       </li>
-      <li class="active"><a href="javascript:;"><i class="fa fa-tachometer fa-fw"></i><span class="menu-title">Dashboard</span><span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level" data-step="3" data-intro="This is a tooltip!">
-          <li class="active"><a href="index.html"><i class="fa fa-pie-chart"></i><span class="submenu-title">Financial</span></a></li>
-          <li><a href="index_c.html"><i class="fa fa-heartbeat"></i><span class="submenu-title">Clinical</span></a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:;"><i class="fa fa-files-o fa-fw"></i><span class="menu-title">Reports</span><span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li><a href="javascript:;"><i class="fa fa-envelope"></i><span class="submenu-title">Inbox</span></a></li>
-          <li><a href="report.html"><i class="fa fa-hospital-o"></i><span class="submenu-title">Clinical Report</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-dollar"></i><span class="submenu-title">Financial Report</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-cogs"></i><span class="submenu-title">Administrative</span></a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:;"><i class="fa fa-user-secret fa-fw"></i><span class="menu-title">Clients</span><span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li><a href="client-dashboard.html"><i class="fa fa-building"></i><span class="submenu-title">Dashboard</span></a></li>
-          <li><a href="client-list-user.html"><i class="glyphicon glyphicon-user"></i><span class="submenu-title">User</span></a></li>
-          <li><a href="client-list-manage.html"><i class="fa fa-cogs"></i><span class="submenu-title">Manage</span></a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:;"><i class="fa fa-cogs fa-fw"></i><span class="menu-title">Setup</span><span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li><a href="javascript:;"><i class="fa fa-building"></i><span class="submenu-title">XML Tags</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-list"></i><span class="submenu-title">XML Baseline List</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-cog"></i><span class="submenu-title">Rules</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-trophy"></i><span class="submenu-title">Interventions</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-bullseye"></i><span class="submenu-title">Rule Designer</span></a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:;"><i class="fa fa-pie-chart fa-fw"></i><span class="menu-title">Analyze</span><span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li><a href="analyze-dashboard.html"><i class="fa fa-tachometer"></i><span class="submenu-title">Dashboard</span></a></li>
-          <li><a href="javascript:;"><i class="fa fa-bar-chart"></i><span class="submenu-title">Data Received</span></a></li>
-        </ul>
-      </li>
+
+      <div class="panel-group">
+        <div class="panel panel-default sidebar-panel">
+          <div class="panel-heading sidebar-panel">
+            <li data-toggle="collapse" href="#dashboard"><a href=""><i class="fa fa-tachometer fa-fw"></i><span class="menu-title">Dashboard</span><span class="fa arrow"></span></a>
+            </li>
+          </div>
+          <div id="dashboard" class="panel-collapse collapse">
+            <ul class="nav nav-second-level">
+              <li class="list-group-item sub-menu active"><a href=""><i class="fa fa-pie-chart"></i><span class="submenu-title">Financial</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-heartbeat"></i><span class="submenu-title">Clinical</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default sidebar-panel">
+          <div class="panel-heading sidebar-panel">
+            <li data-toggle="collapse" href="#reports"><a href=""><i class="fa fa-files-o fa-fw"></i><span class="menu-title">Reports</span><span class="fa arrow"></span></a>
+            </li>
+          </div>
+          <div id="reports" class="panel-collapse collapse">
+            <ul class="nav nav-second-level">
+              <li class="list-group-item active"><a href=""><i class="fa fa-envelope"></i><span class="submenu-title">Inbox</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-hospital-o"></i><span class="submenu-title">Clinical Report</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-dollar"></i><span class="submenu-title">Financial Report</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-cogs"></i><span class="submenu-title">Administrative</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default sidebar-panel">
+          <div class="panel-heading sidebar-panel">
+            <li data-toggle="collapse" href="#clients"><a href=""><i class="fa fa-user-secret fa-fw"></i><span class="menu-title">Clients</span><span class="fa arrow"></span></a>
+            </li>
+          </div>
+          <div id="clients" class="panel-collapse collapse">
+            <ul class="nav nav-second-level">
+              <li class="list-group-item active"><a href=""><i class="fa fa-building"></i><span class="submenu-title">Dashboard</span></a></li>
+              <li class="list-group-item"><a href=""><i class="glyphicon glyphicon-user"></i><span class="submenu-title">User</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-cogs"></i><span class="submenu-title">Manage</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default sidebar-panel">
+          <div class="panel-heading sidebar-panel">
+            <li data-toggle="collapse" href="#analyze"><a href=""><i class="fa fa-pie-chart fa-fw"></i><span class="menu-title">Analyze</span><span class="fa arrow"></span></a>
+            </li>
+          </div>
+          <div id="analyze" class="panel-collapse collapse">
+            <ul class="nav nav-second-level">
+              <li class="list-group-item active"><a href=""><i class="fa fa-tachometer"></i><span class="submenu-title">Dashboard</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-bar-chart"></i><span class="submenu-title">Data Received</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel panel-default sidebar-panel">
+          <div class="panel-heading sidebar-panel">
+            <li data-toggle="collapse" href="#agents"><a href=""><i class="fa fa-user-md fa-fw"></i><span class="menu-title">Agents</span><span class="fa arrow"></span></a>
+            </li>
+          </div>
+          <div id="agents" class="panel-collapse collapse">
+            <ul class="nav nav-second-level">
+              <li class="list-group-item active"><a href=""><i class="fa fa-tachometer"></i><span class="submenu-title">Dashboard</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-history"></i><span class="submenu-title">Activity</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-list"></i><span class="submenu-title">List</span></a></li>
+              <li class="list-group-item" data-toggle="collapse" href="#extraction"><a href=""><i class="glyphicon glyphicon-user"></i><span class="submenu-title">Extraction</span><span class="fa arrow"></span></a>
+                <div id="extraction" class="panel-collapse collapse">
+                  <ul class="nav nav-third-level">
+                    <li class="list-group-item active"><a href="grid-layout-div.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Sources</span></a></li>
+                    <li class="list-group-item"><a href=""><i class="fa fa-angle-right"></i><span class="submenu-title">Agents</span></a></li>
+                    <li class="list-group-item"><a href=""><i class="fa fa-angle-right"></i><span class="submenu-title">Facilities</span></a></li>
+                    <li class="list-group-item"><a href=""><i class="fa fa-angle-right"></i><span class="submenu-title">Parameters</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list-group-item"><a href=""><i class="fa fa-database"></i><span class="submenu-title">Database</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-cubes"></i><span class="submenu-title">Parser</span></a></li>
+              <li class="list-group-item"><a href=""><i class="fa fa-download"></i><span class="submenu-title">Download</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 
       <li><a href="javascript:;"><i class="fa fa-user-md fa-fw"></i><span class="menu-title">Agents</span><span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li><a href="agent-dashboard.html"><i class="fa fa-tachometer"></i><span class="submenu-title">Dashboard</span></a></li>
@@ -67,7 +124,7 @@
           <li><a href="javascript:;"><i class="fa fa-cubes"></i><span class="submenu-title">Parser</span></a></li>
           <li><a href="javascript:;"><i class="fa fa-download"></i><span class="submenu-title">Download</span></a></li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>

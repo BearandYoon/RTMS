@@ -37,6 +37,8 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div ng-controller="TopbarCtrl" ng-include src="'app/views/topbar.html'"></div>
+    <div ng-controller="SidebarCtrl" ng-include src="'app/views/sidebar.html'"></div>
     <div ui-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -76,12 +78,12 @@
     <script src="app/scripts/controllers/topbar.js"></script>
     <script src="app/scripts/controllers/dashboard.js"></script>
 
-    <script src="Scripts/files/js/jquery-1.10.2.min.js"></script>
+<!--     <script src="Scripts/files/js/jquery-1.10.2.min.js"></script>
     <script src="Scripts/files/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="Scripts/files/js/jquery-ui.js"></script>
     <script type="text/javascript" src="Scripts/files/js/jquery.blockUI.js"></script>
     <!--loading bootstrap js-->
-    <script src="Scripts/files/vendors/bootstrap/js/bootstrap.min.js"></script>
+<!--     <script src="Scripts/files/vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="Scripts/files/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
     <script src="Scripts/files/js/highcharts.js"></script>
     <script src="Scripts/files/js/exporting.js"></script>
@@ -103,7 +105,7 @@
     <script src="Scripts/files/js/intro.js"></script>
     <script src="Scripts/files/js/index.js"></script>
     <!--CORE JAVASCRIPT-->
-    <script src="Scripts/files/js/main.js"></script>
+    <!-- <script src="Scripts/files/js/main.js"></script> --> --> -->
     <!-- endbuild -->
 </body>
 </html>
