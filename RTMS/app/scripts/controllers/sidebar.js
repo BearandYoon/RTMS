@@ -8,10 +8,8 @@
  * Controller of the angularTestApp
  */
 angular.module('RTMSApp')
-  .controller('SidebarCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('SidebarCtrl', function ($scope, $rootScope) {
+  	$scope.toggleSidebarCollapse = function() {
+  		$rootScope.IsSidebarCollapsed = !$rootScope.IsSidebarCollapsed;
+  	}
   });

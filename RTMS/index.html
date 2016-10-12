@@ -32,7 +32,7 @@
     <link type="text/css" rel="stylesheet" href="app/styles/style.css" id="theme-change">
     <link type="text/css" rel="stylesheet" href="app/styles/style-responsive.css">
 </head>
-<body ng-app="RTMSApp">
+<body ng-app="RTMSApp" ng-class="{'left-side-collapsed': IsSidebarCollapsed}">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -68,6 +68,7 @@
     <script src="Scripts/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="Scripts/bower_components/angular-translate/angular-translate.js"></script>
     <script src="Scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- <script src="Scripts/files/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -105,7 +106,7 @@
     <script src="Scripts/files/js/intro.js"></script>
     <script src="Scripts/files/js/index.js"></script>
     <!--CORE JAVASCRIPT-->
-    <!-- <script src="Scripts/files/js/main.js"></script> --> --> -->
+    <!-- <script src="Scripts/files/js/main.js"></script> -->
     <!-- endbuild -->
 </body>
 </html>

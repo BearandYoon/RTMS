@@ -122,3 +122,12 @@ body {
 .user-panel-icon {
     padding: 0px !important;
 }
+
+/*topbar css*/
+.notification-parent:hover .notification-child {
+  display: block;
+}
+
+.user-parent:hover .user-child {
+  display: block;
+}

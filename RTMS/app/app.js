@@ -33,5 +33,8 @@ angular
       $translateProvider.fallbackLanguage('en');
       $translateProvider.determinePreferredLanguage();
       $urlRouterProvider.otherwise('/');
+  })
+  .run(function($rootScope) {
+    $rootScope.IsSidebarCollapsed = false;
   });
 
