@@ -5,7 +5,9 @@
       <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
         <div class="page-header pull-left">
           <div class="page-title">Dashboard <span>
-            <button class="btn btn-info btn-sm btn-add-filter" data-hover="tooltip" title="Filter"><i class="fa fa-filter"></i> Filter</button>
+            <button class="btn btn-info btn-sm btn-add-filter" data-hover="tooltip" title="Filter" ng-click="showFilter()">
+              <i class="fa fa-filter"></i> Filter
+            </button>
             </span>
             <span class="facility-view"><input type="text" class="form-control input-sm" palceholder="Facility / Hierarchy" value="AAA Demo Facility"></span>
           </div>
@@ -19,89 +21,58 @@
       <!--END TITLE & BREADCRUMB PAGE--><!--BEGIN CONTENT-->
       <div class="page-content">
         <div class="row">
-          <div id="add-filter" class="col-md-3 clearfix" style="display:;">
+          <div id="add-filter" class="col-md-3 clearfix" style="display:;" ng-if="IsShowFilter">
             <div class="panel panel-orange" data-step="2" data-intro="This is a tooltip!">
-              <div class="panel-heading">Add Filter</div>
+              <div class="panel-heading filter-header">Add Filter</div>
               <div class="panel-body">
                 <form>
                   <div class="clearfix">
                     <div class="form-group">
                       <label>As Of Date:</label>
-                      <div class="input-icon right datetime-picker"><i class="fa fa-calendar"></i>
+                      <!-- <div class="input-icon right datetime-picker"><i class="fa fa-calendar"></i>
                         <input type="text" class="form-control">
-                      </div>
+                      </div> -->
+                      <p class="input-group">
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                      </p>
                     </div>
                     <div class="form-group">
                       <label>Facility:</label>
                       <select class="form-control input-sm form-combobox">
-                        <option id="201">AAA Demo Facility</option>
-                        <option id="202">Allegany Health Nursing and Rehabilitation</option>
-                        <option id="203">Berlin Nursing &amp; Rehabilitation</option>
-                        <option id="204">Bowling Green</option>
-                        <option id="205">Bowling Green Care Center</option>
-                        <option id="206">Bradford Manor</option>
-                        <option id="207">Briarwood Village</option>
-                        <option id="208">Celina Manor</option>
-                        <option id="209">Chapel Hill Nursing &amp; Rehabilitation</option>
-                        <option id="210">Cliveden</option>
-                        <option id="211">Corry Manor</option>
-                        <option id="212">Court House Manor</option>
-                        <option id="213">Crestview Manor</option>
-                        <option id="214">Delmar</option>
-                        <option id="215">Edinboro Manor</option>
-                        <option id="216">Fairfield Nursing &amp; Rehabilitation</option>
-                        <option id="217">Fairview Manor</option>
-                        <option id="218">Falling Springs</option>
-                        <option id="219">Fox Run Manor</option>
-                        <option id="220">Hempfield Manor</option>
-                        <option id="221">Lima</option>
-                        <option id="222">Maplewood</option>
-                        <option id="223">Oakland Nursing &amp; Rehabilitation</option>
-                        <option id="224">Piqua Manor</option>
-                        <option id="225">Pleasant Hill Manor</option>
-                        <option id="226">Roselawn Manor</option>
-                        <option id="227">Shawnee</option>
-                        <option id="228">St. Catherine's Findlay</option>
-                        <option id="229">St. Catherine's Fostoria</option>
-                        <option id="230">St. Catherine's of Washington Court House</option>
-                        <option id="231">Stone Pear Pavilion</option>
-                        <option id="232">Sweden Valley Manor</option>
-                        <option id="233">The Manor at Perrysburg</option>
-                        <option id="234">Tucker House</option>
-                        <option id="235">Van Wert Manor</option>
-                        <option id="236">Wapakoneta Manor</option>
-                        <option id="237">Warren Manor</option>
+                        <option ng-repeat="item in facility">{{item}}</option>
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Unit:</label>
                       <div class="multiselect-wrapper">
                         <select multiple="multiple" class="form-control input-sm form-multiselect">
-                          <option value="0" selected="selected">All</option>
-                          <option value="-7" selected="selected">Station 1</option>
-                          <option value="-34" selected="selected">Station 2</option>
-                          <option value="-25">Station 3</option>
-                          <option value="-1">Station 4</option>
-                          <option value="-39">Station 5</option>
+                          <option value={{$index}} ng-repeat="item in units">{{item}}</option>
                         </select>
+<!--                         <select class="form-control input-sm form-multiselect">
+                          <option ng-repeat="item in facility">
+                            <input type="checkbox" name="" />
+                              {{item}}
+                          </option>
+                        </select>
+                        <ol class="nya-bs-select"  multiple ng-model="myModel">
+                          <li nya-bs-option="option in facility">
+                              <a href="#" class="small">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="">{{option}}
+                                </label>                                
+                              </a>
+                          </li>
+                      </ol> -->
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Payer:</label>
                       <div class="multiselect-wrapper">
                         <select multiple="multiple" class="form-control input-sm form-multiselect">
-                          <option id="308">All</option>
-                          <option id="309">Hospice</option>
-                          <option id="310">Hospice MA Heavy</option>
-                          <option id="311">Insurance</option>
-                          <option id="312">MA-Pending 2015</option>
-                          <option id="313">MA-Res Care Day</option>
-                          <option id="314">MA-Res Care Vent</option>
-                          <option id="315">Medicare</option>
-                          <option id="316">Private</option>
-                          <option id="317">Private - No Bill</option>
-                          <option id="318">Unknown</option>
-                          <option id="319">VA</option>
+                          <option value={{$index}} ng-repeat="item in players">{{item}}</option>
                         </select>
                       </div>
                     </div>
@@ -121,7 +92,8 @@
                   <div class="panel">
                     <div class="panel-heading">Real Time Average ADL Scrore Distribution</div>
                     <div class="panel-body">
-                      <div id="columnchart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                      <!-- <div id="columnchart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div> -->
+                      <highchart id="chart1" config="chartConfig"></highchart>
                     </div>
                   </div>
                 </li>
@@ -195,4 +167,31 @@
       </div>
       <!--END FOOTER--></div>
     <!--END PAGE WRAPPER--></div>
+</div>
+<div class="unopen" id="help-feedback" ng-click="showFeedback()">
+  <h3>
+    <span><i class="fa fa-envelope"></i> Help &amp; Feedback</span> 
+    <a class="pull-right" href="" ng-if="feedbackStep > 0"><i class="fa fa-minus"></i></a>
+  </h3>
+  <div class="feedback-wrapper">
+    <ul ng-if="feedbackStep === 1">
+      <li><a href=""><strong>Get Help</strong><br>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+        </li>
+      <li><a href=""><strong>Give Us Feedback</strong><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+      </li>
+    </ul>
+    <div class="feedback-form" ng-if="feedbackStep > 1">
+      <div class="welcome-msg" ng-if="feedbackStep === 3">
+        <h4>Thanks for your message!</h4>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="10"></textarea>
+      </div>
+      <div class="">
+        <button type="button" class="btn btn-sm btn-info">Send</button>
+      </div>
+    </div>
+  </div>
 </div>

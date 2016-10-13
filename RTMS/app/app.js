@@ -17,6 +17,9 @@ angular
     'ngTouch',
     'ui.router',
     'pascalprecht.translate',
+    'ui.bootstrap',
+    'nya.bootstrap.select',
+    'highcharts-ng'
   ]).config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
       $stateProvider
         .state('dashboard', {

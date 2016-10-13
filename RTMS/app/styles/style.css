@@ -957,10 +957,28 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge{color:#0a81
 .btn-outlined.btn-violet{background:none; border:1px solid #9351ad; color:#9351ad;}
 .btn-outlined.btn-grey{background:none; border:1px solid #1b4283; color:#1b4283;}
 .btn-outlined.btn-dark{background:none; border:1px solid #594857; color:#594857;}
-.btn-default{color:#fff; background-color:#333; border-color:#333;}
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default{color:#fff; background-color:#f46f34; border-color:#f46f34;}
-.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default{background-image:none;}
+
+.btn-default 
+{
+/*	color:#fff; 
+	background-color:#333; 
+	border-color:#333;*/
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+/*	color:#fff;
+	background-color:#f46f34; 
+	border-color:#f46f34;*/
+}
+
+.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+	background-image:none;
+}
+
 .btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active{background-color:#efefef; border-color:#e5e5e5;}
+
 .btn-primary{color:#fff; background-color:#0a819c; border-color:#097992;}
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{color:#fff; background-color:#086176; border-color:#064a59;}
 .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{background-image:none;}
@@ -1050,7 +1068,18 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge{color:#0a81
 .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn{border-bottom-left-radius:0 !important; border-top-left-radius:0 !important;}
 .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn{border-bottom-right-radius:0 !important; border-top-right-radius:0 !important;}
 .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child){-webkit-border-radius:0 !important; -moz-border-radius:0 !important; border-radius:0 !important;}
-.dropdown-menu{margin:0; padding:0; border:0; border-radius:0; background:#1f1f1f; -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.15) !important; box-shadow:0 1px 1px rgba(0, 0, 0, 0.15) !important;}
+
+.dropdown-menu
+{
+/*	margin:0; 
+	padding:0; 
+	border:0; 
+	border-radius:0; 
+	background:#1f1f1f; 
+	-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.15) !important; 
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.15) !important;*/
+}
+
 .dropdown-menu li a{color:#f46f34; padding:9px 10px; font-size:12px;}
 .dropdown-submenu{position:relative;}
 .dropdown-submenu > .dropdown-menu{top:5px; left:100%; margin-top:-6px; margin-left:-1px;}
@@ -1501,7 +1530,20 @@ ul.ul-edit.nav.nav-tabs li a{border-radius:4px !important;}
 .multiselect-wrapper .dropdown-menu li a:hover{background:#3399ff !important; color:#fff !important; border:0 !important; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;}
 .multiselect-container>li>a>label{padding-left:30px;}
 #add-filter .form-group{margin-bottom:10px;}
-#add-filter .panel > .panel-heading{font-size:14px; font-weight:bold;}
+
+#add-filter .panel > .panel-heading
+{
+	font-size:14px; 
+	font-weight:bold;
+}
+
+#add-filter .panel > .filter-header
+{
+	padding: 7px 10px !important;
+	font-size:14px; 
+	font-weight:bold;
+}
+
 #add-filter .panel-body{padding:10px;}
 .table>thead>tr>th{vertical-align:middle;}
 .draggablePanelList .panel-heading{cursor:move;}
