@@ -29,9 +29,6 @@
                   <div class="clearfix">
                     <div class="form-group">
                       <label>As Of Date:</label>
-                      <!-- <div class="input-icon right datetime-picker"><i class="fa fa-calendar"></i>
-                        <input type="text" class="form-control">
-                      </div> -->
                       <p class="input-group">
                         <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
@@ -48,32 +45,13 @@
                     <div class="form-group">
                       <label>Unit:</label>
                       <div class="multiselect-wrapper">
-                        <select multiple="multiple" class="form-control input-sm form-multiselect">
-                          <option value={{$index}} ng-repeat="item in units">{{item}}</option>
-                        </select>
-<!--                         <select class="form-control input-sm form-multiselect">
-                          <option ng-repeat="item in facility">
-                            <input type="checkbox" name="" />
-                              {{item}}
-                          </option>
-                        </select>
-                        <ol class="nya-bs-select"  multiple ng-model="myModel">
-                          <li nya-bs-option="option in facility">
-                              <a href="#" class="small">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="">{{option}}
-                                </label>                                
-                              </a>
-                          </li>
-                      </ol> -->
+                        <div ng-dropdown-multiselect="" options="units" selected-model="selUnits"></div>
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Payer:</label>
                       <div class="multiselect-wrapper">
-                        <select multiple="multiple" class="form-control input-sm form-multiselect">
-                          <option value={{$index}} ng-repeat="item in players">{{item}}</option>
-                        </select>
+                        <div ng-dropdown-multiselect="" options="players" selected-model="selPlayer"></div>
                       </div>
                     </div>
                     <div class="form-group">
@@ -85,29 +63,30 @@
               </div>
             </div>
           </div>
-          <div class="col-md-9" id="dashboard-data">
+          <div class="col-md-9" id="dashboard-data" ng-class="{'full-width': !IsShowFilter}">
             <div class="row">
               <ul id="draggablePanelList" class="list-unstyled">
                 <li class="col-md-6 dragitem" data-step="4" data-intro="This is a tooltip!">
                   <div class="panel">
-                    <div class="panel-heading">Real Time Average ADL Scrore Distribution</div>
+                    <div class="panel-heading chart-heading">Real Time Average ADL Scrore Distribution</div>
                     <div class="panel-body">
                       <!-- <div id="columnchart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div> -->
-                      <highchart id="chart1" config="chartConfig"></highchart>
+                      <highchart config="chart1Config" class="chart-container" style="width:100%; height:260px; margin:0 auto"></highchart>
                     </div>
                   </div>
                 </li>
                 <li class="col-md-6 dragitem" data-step="5" data-intro="This is a tooltip!">
                   <div class="panel">
-                    <div class="panel-heading">Real Time RUGs IV ADL Distribution</div>
+                    <div class="panel-heading chart-heading">Real Time RUGs IV ADL Distribution</div>
                     <div class="panel-body">
-                      <div id="piechart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                      <highchart config="chart2Config" class="chart-container" style="width:100%; height:260px; margin:0 auto"></highchart>
+                      <!-- <div id="piechart" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div> -->
                     </div>
                   </div>
                 </li>
                 <li class="col-md-6 dragitem" data-step="6" data-intro="This is a tooltip!">
                   <div class="panel">
-                    <div class="panel-heading">Real Time ADL Scrore vs Last MDS Score</div>
+                    <div class="panel-heading chart-heading">Real Time ADL Scrore vs Last MDS Score</div>
                     <div class="panel-body">
                       <div class="table-responsive" style="height:260px;">
                         <table class="table table-hover table-bordered">
@@ -142,9 +121,10 @@
                 </li>
                 <li class="col-md-6 dragitem" data-step="7" data-intro="This is a tooltip!">
                   <div class="panel">
-                    <div class="panel-heading">RUGs IV ADL Distribution</div>
+                    <div class="panel-heading chart-heading">RUGs IV ADL Distribution</div>
                     <div class="panel-body">
-                      <div id="columnchart2" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div>
+                      <highchart config="chart3Config" class="chart-container" style="width:100%; height:260px; margin:0 auto"></highchart>
+                      <!-- <div id="columnchart2" class="chart-container" style="width:100%; height:260px; margin:0 auto"></div> -->
                     </div>
                   </div>
                 </li>

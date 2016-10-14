@@ -68,6 +68,24 @@
     <Content Include="Scripts\bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\bower_components\angular-bootstrap\ui-bootstrap.js" />
     <Content Include="Scripts\bower_components\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\development_index.html" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\dist\angularjs-dropdown-multiselect.min.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\Gruntfile.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\body-bg.jpg" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\download-button.png" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\github-button.png" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\header-bg.jpg" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\highlight-bg.jpg" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\images\sidebar-bg.jpg" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\index.html" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\javascripts\app.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\javascripts\main.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\javascripts\pages\home\ExampleCtrl.js" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\javascripts\pages\home\home.html" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\stylesheets\print.css" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\stylesheets\pygment_trac.css" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\pages\stylesheets\stylesheet.css" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\src\angularjs-dropdown-multiselect.js" />
     <Content Include="Scripts\bower_components\highcharts\.gitignore" />
     <Content Include="Scripts\bower_components\highcharts\adapters\standalone-framework.js" />
     <Content Include="Scripts\bower_components\highcharts\adapters\standalone-framework.src.js" />
@@ -569,6 +587,11 @@
     <Content Include="Scripts\bower_components\highcharts\bower.json" />
     <Content Include="Scripts\bower_components\highcharts\package.json" />
     <Content Include="Scripts\bower_components\highcharts\README.md" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\.bower.json" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\bower.json" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\CHANGELOG.md" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\package.json" />
+    <Content Include="Scripts\bower_components\angularjs-dropdown-multiselect\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

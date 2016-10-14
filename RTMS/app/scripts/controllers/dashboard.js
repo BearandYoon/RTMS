@@ -9,7 +9,8 @@
  */
 angular.module('RTMSApp')
   .controller('DashboardCtrl', function ($scope) {
-
+  	$scope.selFacility = [];
+  	
 	$scope.facility = [
 		'AAA Demo Facility',
 		'Bowling Green',
@@ -24,139 +25,257 @@ angular.module('RTMSApp')
 		'Edinboro Manor',
 		'Lima',
 		'Maplewood',
-		'Piqua Manor',
-		'Pleasant Hill Manor',
-		'Shawnee'
+		'Piqua Manor'
 	];
 
-	$scope.units = [
-		'Station 1',
-		'Station 2',
-		'Station 3',
-		'Station 4',
-		'Station 5',
-		'Station 6',
-		'Station 7'
-	];
+	$scope.example1model = []; 
+	$scope.example1data = [{id: 1, label: "David"}, {id: 2, label: "Jhon"}, {id: 3, label: "Danny"}];
+	$scope.units = [{
+		id: 1,
+		label: "Station 1"
+	}, {
+		id: 2,
+		label: "Station 2"
+	}, {
+		id: 3,
+		label: "Station 3"
+	}, {
+		id: 4,
+		label: "Station 4"
+	}, {
+		id: 5,
+		label: "Station 5"
+	}, {
+		id: 6,
+		label: "Station 6"
+	}, {
+		id: 7,
+		label: "Station 7"
+	}];
 
-	$scope.players = [
-		'Hospice',
-		'Hospice MA Heavy',
-		'Insurance',
-		'MA-Pending 2015',
-		'MA-Res Care Day',
-		'MA-Res Care Vent',
-		'Medicare',
-		'Private - No Bill',
-		'Unknown',
-		'VA'
-	];
+	$scope.selUnits = [];
+
+	$scope.players = [{
+		id: 1,
+		label: 'Hospice'
+	},{
+		id: 2,
+		label: 'Hospice MA Heavy'
+	},{
+		id: 3,
+		label: 'Insurance'
+	},{
+		id: 4,
+		label: 'MA-Pending 2015'
+	},{
+		id: 5,
+		label: 'MA-Res Care Day'
+	},{
+		id: 6,
+		label: 'MA-Res Care Vent'
+	},{
+		id: 7,
+		label: 'Medicare'
+	},{
+		id: 8,
+		label: 'Private - No Bill'
+	},{
+		id: 9,
+		label: 'Unknown'
+	},{
+		id: 10,
+		label: 'VA'
+	}];
+	$scope.selPlayer = [];
 
 	$scope.IsShowFilter = true;
 	$scope.feedbackStep = 0;
 
-	$scope.chartConfig = {
-	  options: {
-	      //This is the Main Highcharts chart config. Any Highchart options are valid here.
-	      //will be overriden by values specified below.
-	      chart: {
-	          type: 'column'
-	      },
-	      tooltip: {
-	          style: {
-	              padding: 10,
-	              fontWeight: 'bold'
-	          }
+	$scope.chart1Config = {
+		options: {
+		  chart: {
+		      type: 'column'
+		  },
+		  tooltip: {
+		      style: {
+		          padding: 10,
+		          fontWeight: 'bold'
+		      }
+		  }
+		},
+		title: {
+	      text: '',
+	    },
+	    subtitle: {
+	      text: ' '
+	    },
+	    xAxis: {
+	      categories: ['05/01/2015', '05/02/2015', '05/03/2015', '05/04/2015', '05/05/2015', '05/06/2015', '05/06/2015', '05/07/2015', '05/08/2015', '05/09/2015', '05/10/2015', '05/11/2015', '05/12/2015'],
+	      type: ' ',
+	      labels: {
+	        rotation: -45
 	      }
-	  },
-	  // //The below properties are watched separately for changes.
-
-	  // //Series object (optional) - a list of series using normal Highcharts series options.
-	  // series: [{
-	  //    data: [10, 15, 12, 8, 7]
-	  // }],
-	  // //Title configuration (optional)
-	  // title: {
-	  //    text: 'Hello'
-	  // },
-	  // //Boolean to control showing loading status on chart (optional)
-	  // //Could be a string if you want to show specific loading text.
-	  // loading: false,
-	  // //Configuration for the xAxis (optional). Currently only one x axis can be dynamically controlled.
-	  // //properties currentMin and currentMax provided 2-way binding to the chart's maximum and minimum
-	  // xAxis: {
-	  // currentMin: 0,
-	  // currentMax: 20,
-	  // title: {text: 'values'}
-	  // },
-	  // //Whether to use Highstocks instead of Highcharts (optional). Defaults to false.
-	  // useHighStocks: false,
-	  // //size (optional) if left out the chart will default to size of the div or something sensible.
-	  // size: {
-	  //  width: 400,
-	  //  height: 300
-	  // },
-	  // //function (optional)
-	  // func: function (chart) {
-	  //  //setup some logic for the chart
-	  // }
+	    },
+	    yAxis: {
+	      //min: 0,
 	      title: {
-      text: ' ',
-    },
-    subtitle: {
-      text: ' '
-    },
-    xAxis: {
-      categories: ['05/01/2015', '05/02/2015', '05/03/2015', '05/04/2015', '05/05/2015', '05/06/2015', '05/06/2015', '05/07/2015', '05/08/2015', '05/09/2015', '05/10/2015', '05/11/2015', '05/12/2015'],
-      type: ' ',
-      labels: {
-        rotation: -45
-      }
-    },
-    yAxis: {
-      //min: 0,
-      title: {
-        text: ' '
-      }
-    },
-    //tooltip: {
-    // pointFormat: 'Visits: <b>{point.y:.1f}</b>'
-    // },
-    legend: {
-      enabled: true,
-    },
-    credits: 'true',
-    plotOptions: {
-      column: {
-        pointPadding: 0.2,
-        borderWidth: 1
-      }
-    },
-    navigation: {
-      buttonOptions: {
-        verticalAlign: 'top',
-        y:-10
-      }
-    },
-    series: [{
-      name: 'Average Current ADl RUGs IV',
-      data: [1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.5, 6.5, 7.5, 8.5, 9.5,12.5]
-
-    }, {
-      name: 'Average Current ADl RUGs III',
-      data: [2.0, 3.2, 4.5, 5.0, 5.6, 5.7, 6.3, 7.0, 8.4, 9.2, 10.2, 13.5]
-
-    }],
-
-    colors: ['#f46f34', '#0074bd', '#1b4283', '#000000']
+	        text: ' '
+	      }
+	    },
+	    legend: {
+	      enabled: true,
+	    },
+	    credits: 'true',
+	    plotOptions: {
+	      column: {
+	        pointPadding: 0.2,
+	        borderWidth: 1
+	      }
+	    },
+	    navigation: {
+	      buttonOptions: {
+	        verticalAlign: 'top',
+	        y:-10
+	      }
+	    },
+	    series: [{
+	      name: 'Average Current ADl RUGs IV',
+	      data: [1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.5, 6.5, 7.5, 8.5, 9.5,12.5],
+	      color: '#f46f34'
+	    }, {
+	      name: 'Average Current ADl RUGs III',
+	      data: [2.0, 3.2, 4.5, 5.0, 5.6, 5.7, 6.3, 7.0, 8.4, 9.2, 10.2, 13.5],
+	      color: '#0074bd'
+	    }]
 	};
 
-	$(function()   {
-    	$(".form-multiselect").multiselect(
-    	{
-    		buttonWidth: '100%'
-    	});
-	});
+	$scope.chart3Config = {
+		options: {
+		  chart: {
+		      type: 'column'
+		  },
+		  tooltip: {
+		      style: {
+		          padding: 10,
+		          fontWeight: 'bold'
+		      }
+		  }
+		},
+		title: {
+	      text: ' ',
+	    },
+	    subtitle: {
+	      text: ' '
+	    },
+	    xAxis: {
+	      categories: ['A(0-5)', 'B(6-10)', 'C(11-15)'],
+	      type: ' ',
+	      labels: {
+	        rotation:0
+	      }
+	    },
+	    yAxis: {
+	      //min: 0,
+	      title: {
+	        text: ' '
+	      }
+	    },
+	    legend: {
+	      enabled: true,
+	    },
+	    credits: 'true',
+	    plotOptions: {
+	      column: {
+	        pointPadding: 0.2,
+	        borderWidth: 1
+	      }
+	    },
+	    navigation: {
+	      buttonOptions: {
+	        verticalAlign: 'top',
+	        y:-10
+	      }
+	    },
+	    series: [{
+	      name: '05/03/2015',
+	      data: [1.0, 1.5, 2.0],
+	      color: '#f46f34'
+
+	    }, {
+	      name: '30 Days Prior',
+	      data: [2.0, 3.2, 4.5],
+	      color: '#0074bd'
+
+	    }, {
+	      name: '7 Days Prior',
+	      data: [2.0, 3.2, 4.5],
+	      color: '#1b4283'
+
+	    }]
+	};
+    
+	$scope.chart2Config = {
+		options: {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				margin: [0, 0, 10, 0],
+				spacingTop: 35,
+				spacingBottom: 5,
+				spacingLeft: 0,
+				spacingRight: 5,
+				spacingTop: 40
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			plotOptions: {
+				pie: {
+					size: '83%',
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: false,
+					showInLegend: true
+				}
+	    	},
+		},
+		title: {
+	      text: ''
+	    },
+	    credits: true,
+	    navigation: {
+	      buttonOptions: {
+	        verticalAlign: 'top',
+	        y: -35
+	      }
+	    },
+	    legend: {
+	      title: {
+	        text: 'ADL RUGs IV Distrubution'
+	      },
+	      enabled: true,
+	      verticalAlign: 'bottom'
+	    },
+	    series: [{
+	      type: 'pie',
+	      name: 'Page Visits',
+	      data: [{
+	      	name: 'A',
+	      	y: 46,
+	      	color: '#f46f34',
+	      	sliced: true
+	      }, {
+	      	name: 'B',
+	      	y: 14,
+	      	color: '#0074bd'
+	      }, {
+	      	name: 'C',
+	      	y: 40,
+	      	color: '#1b4283'
+	      }]
+	    }]
+	};
 
 	$scope.showFilter = function() {
 		$scope.IsShowFilter = !$scope.IsShowFilter;

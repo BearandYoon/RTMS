@@ -1520,12 +1520,32 @@ ul.ul-edit.nav.nav-tabs li a{border-radius:4px !important;}
 #change-product .product-list{background:#fff; width:250px;}
 #change-product .product-list a{display:block; text-align:center;}
 .multiselect-wrapper{position:relative; width:100%; text-align:left;}
-.multiselect-wrapper .btn{text-align:left; height:30px; border-radius:0 !important; background:#fff; color:#555; border-color:#e5e5e5; text-transform:none; letter-spacing:normal; font-size:12px;}
+
+.multiselect-wrapper .btn
+{
+	text-align:left; 
+	height:30px; 
+	border-radius:0 !important; 
+	background:#fff; 
+	color:#555; 
+	border-color:#e5e5e5; 
+	text-transform:none; 
+	letter-spacing:normal; 
+	font-size:12px;
+	width: 100%;
+}
+
 .multiselect-wrapper .btn-default:hover, .multiselect-wrapper .btn-default:focus, .multiselect-wrapper .btn-default:active, .multiselect-wrapper .btn-default.active, .multiselect-wrapper .open .dropdown-toggle.btn-default{background:#fff; color:#555; border-color:#999;}
 .btn-group.open .dropdown-toggle{box-shadow:none;}
 .multiselect-wrapper .multiselect-container{width:100%; max-height:170px; overflow-y:auto; overflow-x:hidden; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;}
 .multiselect-wrapper .btn .caret{float:right; margin-top:6px;}
-.multiselect-wrapper .dropdown-menu{background:#fff;}
+
+.multiselect-wrapper .dropdown-menu
+{
+	background:#fff;
+	width: 100%;
+}
+
 .multiselect-wrapper .dropdown-menu li a{border-bottom:0; padding:0; background:#fff; color:#555;}
 .multiselect-wrapper .dropdown-menu li a:hover{background:#3399ff !important; color:#fff !important; border:0 !important; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;}
 .multiselect-container>li>a>label{padding-left:30px;}
@@ -1540,8 +1560,11 @@ ul.ul-edit.nav.nav-tabs li a{border-radius:4px !important;}
 #add-filter .panel > .filter-header
 {
 	padding: 7px 10px !important;
-	font-size:14px; 
-	font-weight:bold;
+}
+
+.chart-heading
+{
+	padding: 7px 10px !important;
 }
 
 #add-filter .panel-body{padding:10px;}

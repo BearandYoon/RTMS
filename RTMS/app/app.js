@@ -19,7 +19,8 @@ angular
     'pascalprecht.translate',
     'ui.bootstrap',
     'nya.bootstrap.select',
-    'highcharts-ng'
+    'highcharts-ng',
+    'angularjs-dropdown-multiselect'
   ]).config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
       $stateProvider
         .state('dashboard', {

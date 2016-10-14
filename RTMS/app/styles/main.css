@@ -131,3 +131,12 @@ body {
 .user-parent:hover .user-child {
   display: block;
 }
+
+/*Dashboard*/
+.full-width {
+  width: 100% !important;
+}
+
+.dropdown-multiselect {
+  width: 100%
+}
